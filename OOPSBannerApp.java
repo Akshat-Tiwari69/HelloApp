@@ -1,5 +1,5 @@
 /**
- * OOPSBannerApp UC1, UC2 & UC3 - Banner Display Application
+ * OOPSBannerApp UC1, UC2, UC3 & UC4 - Banner Display Application
  *
  * This class demonstrates two user stories:
  *
@@ -18,10 +18,15 @@
  *   intermediate String creation and improves readability while preserving
  *   the exact visual output of UC2.
  *
+ * UC4: Banner output (array + loop)
+ * - Stores the banner lines in a `String[]` and prints them using a loop.
+ *   This reduces repetition from multiple `System.out.println()` calls and
+ *   makes the code more modular and maintainable.
+ *
  * Key concepts: ASCII art, `String.join()`, memory efficiency, refactoring.
  *
  * @author Akshat Tiwari
- * @version 3.0
+ * @version 4.0
  */
 public class OOPSBannerApp {
     public static void main(String[] args) {
@@ -50,5 +55,20 @@ public class OOPSBannerApp {
         System.out.println(String.join(" ", "*       *", "*       *", "*        ", "       * "));
         System.out.println(String.join(" ", " *     * ", " *     * ", "*        ", " *     * "));
         System.out.println(String.join(" ", "  *****  ", "  *****  ", "*        ", "  *****  "));
+
+        // UC4: Build the same banner lines into an array and print with a loop
+        String[] uc4Lines = new String[] {
+            String.join(" ", "  *****  ", "  *****  ", "*******  ", "  *****  "),
+            String.join(" ", " *     * ", " *     * ", "*      * ", " *     * "),
+            String.join(" ", "*       *", "*       *", "*      * ", "*        "),
+            String.join(" ", "*       *", "*       *", "*******  ", "  ****   "),
+            String.join(" ", "*       *", "*       *", "*        ", "       * "),
+            String.join(" ", " *     * ", " *     * ", "*        ", " *     * "),
+            String.join(" ", "  *****  ", "  *****  ", "*        ", "  *****  ")
+        };
+
+        for (String line : uc4Lines) {
+            System.out.println(line);
+        }
     }
 }
