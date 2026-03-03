@@ -105,15 +105,6 @@ Combines array declaration and initialization using array literal syntax `{ ... 
 ---
 
 ## How to Use
-
-### Checkout a Specific UC
-```bash
-git checkout feature/UC1   # Simple output
-git checkout feature/UC2   # String concatenation
-git checkout feature/UC3   # String.join()
-git checkout feature/UC4   # Array with loop
-git checkout feature/UC5   # Inline array initialization (latest)
-git checkout dev           # Latest version with all features
 ```
 
 ### Compile and Run
